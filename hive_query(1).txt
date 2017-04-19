@@ -1,0 +1,3 @@
+Average age of male and female persons died in the titanic tragedy
+
+SELECT SEX,ROUND(COUNT(*)/SUM(COUNT(*)) OVER (),2) AS AVG FROM Titanic WHERE SUR=1 GROUP BY sex ORDER BY sex;

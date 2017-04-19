@@ -1,0 +1,8 @@
+--CREATING TABLE
+CREATE TABLE IF NOT EXISTS Titanic(id int,sur int,pclass int,name string,sex string,age int,sibsp int,parch int,ticket string,fare float,cabin string,embarked string) 
+     ROW FORMAT DELIMITED
+     FIELDS TERMINATED BY ','
+     STORED AS TEXTFILE;
+
+--LOADING DATA
+LOAD DATA LOCAL INPATH '/home/acadgild/Downloads/TitanicData.txt' INTO TABLE Titanic;
